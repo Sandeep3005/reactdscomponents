@@ -2,19 +2,20 @@ name: Semantic release
 
 on: 
   push:
-    branches:
-      - master
+    branches: [ master ]
 jobs:
   quality:
+  
     runs-on: ${{ matrix.os }}
+    
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 15.x ]
+        node-version: [ 12.x, 14.x, 15.x ]
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@v2
     - name: Use nodejs ${{ matrix.node-version }}
-    - uses: actions/setup-node@v2
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci

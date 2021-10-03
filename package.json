@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "commit": "git-cz",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
@@ -74,10 +75,16 @@
     "@storybook/node-logger": "^6.3.9",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.9",
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^18.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Sandeep3005/reactdscomponents.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
